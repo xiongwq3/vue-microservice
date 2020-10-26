@@ -1,6 +1,6 @@
 <template>
   <el-container class="monitor-container">
-    <el-row :gutter="20" justify="space-around">
+    <el-row class="monitor-row" :gutter="20">
       <!-- CPU -->
       <el-col :span="12">
         <panel
@@ -14,7 +14,7 @@
         />
       </el-col>
     </el-row>
-    <el-row :gutter="20" justify="space-around">
+    <el-row class="monitor-row" :gutter="20">
       <!-- Disk -->
       <el-col :span="12">
         <panel
@@ -41,9 +41,17 @@ export default {
 
 <style lang="scss">
 .monitor-container {
-  align-items: baseline;
+  align-content: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+}
+.monitor-row {
+  margin-top: 20px;
+}
+.monitor-row:nth-child(1) {
+  margin-top: 0px;
+}
+.monitor-row:nth-last-child(1) {
+  margin-bottom: 20px;
 }
 </style>
