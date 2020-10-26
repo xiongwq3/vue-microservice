@@ -17,38 +17,38 @@ export default new Router({
         {
           path: '/',
           name: 'firstPage',
-          redirect: { path: '/unimplemented1' }
+          redirect: { path: '/unimplemented1' },
         },
         {
           path: '/unimplemented1',
           name: 'unimplemented1',
-          component: NotFound
+          component: NotFound,
         },
         {
           path: '/unimplemented2',
           name: 'unimplemented2',
-          component: NotFound
+          component: NotFound,
         },
         {
           path: '/unimplemented3',
           name: 'unimplemented3',
-          component: NotFound
+          component: NotFound,
         },
         {
           path: '/unimplemented4',
           name: 'unimplemented4',
-          component: NotFound
+          component: NotFound,
         },
         {
           path: '/404',
           name: '404',
-          component: NotFound
-        }
-      ]
+          component: NotFound,
+        },
+      ],
     },
     {
       path: '*',
-      redirect: { path: '/404' }
-    }
-  ]
+      redirect: { path: '/404' },
+    },
+  ],
 })

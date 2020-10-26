@@ -8,11 +8,9 @@ export default new Vuex.Store({
     isCollapse: false
   },
   mutations: {
-    switchCollapse (state) {
+    switchCollapse(state) {
       state.isCollapse = !state.isCollapse
     }
   },
-  actions: {
-
-  }
+  actions: {}
 })

@@ -6,7 +6,8 @@
     background-color="#20222A"
     text-color="rgba(255,255,255,.5)"
     active-text-color="rgba(255,255,255,1)"
-    :collapse="isCollapse">
+    :collapse="isCollapse"
+  >
     <el-menu-item index="/unimplemented1">
       <i class="el-icon-upload2"></i>
       <span slot="title">流量管理</span>
@@ -29,23 +30,23 @@
 <script>
 export default {
   props: ['isCollapse'],
-  data () {
+  data() {
     return {
-      currentPath: location.pathname
+      currentPath: location.pathname,
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-  .el-menu {
-    border: none;
-  }
-  .menu-nav:not(.el-menu--collapse) {
-    width: 200px;
-    min-height: 400px;
-  }
-  .el-menu-item:hover {
-    background-color: rgb(75, 76, 77) !important;
-  }
+.el-menu {
+  border: none;
+}
+.menu-nav:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
+}
+.el-menu-item:hover {
+  background-color: rgb(75, 76, 77) !important;
+}
 </style>

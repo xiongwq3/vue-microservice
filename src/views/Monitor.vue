@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import Panel from "@/components/panel";
+import Panel from '@/components/panel'
 
 export default {
-  components: { Panel }
-};
+  components: { Panel },
+}
 </script>
 
 <style lang="scss">

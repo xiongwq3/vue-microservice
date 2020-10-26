@@ -3,18 +3,23 @@
     <el-aside width="asideWidth">
       <div class="logo">
         <div v-show="!isCollapse">
-        <img src="../assets/logo.svg" alt="ELementUI" width="60" height="60">
-        <p>Prometheus</p>
+          <img
+            src="../assets/logo.svg"
+            alt="ELementUI"
+            width="60"
+            height="60"
+          />
+          <p>Prometheus</p>
         </div>
       </div>
-      <sidebar :isCollapse="isCollapse"/>
+      <sidebar :isCollapse="isCollapse" />
     </el-aside>
     <el-container>
       <el-header>
-        <headers/>
+        <headers />
       </el-header>
       <el-main>
-        <router-view v-if="isRouterAlive"/>
+        <router-view v-if="isRouterAlive" />
       </el-main>
     </el-container>
   </el-container>
@@ -24,36 +29,36 @@
 import Sidebar from '@/components/sidebar'
 import Headers from '@/components/header'
 export default {
-  provide () {
+  provide() {
     return {
-      reload: this.reload
+      reload: this.reload,
     }
   },
-  data () {
+  data() {
     return {
-      isRouterAlive: true
+      isRouterAlive: true,
     }
   },
   components: {
     Sidebar,
-    Headers
+    Headers,
   },
   methods: {
-    reload () {
+    reload() {
       this.isRouterAlive = false
       this.$nextTick(() => {
         this.isRouterAlive = true
       })
-    }
+    },
   },
   computed: {
-    isCollapse () {
+    isCollapse() {
       return this.$store.state.isCollapse
     },
-    asideWidth () {
+    asideWidth() {
       return this.$store.state.isCollapse ? 'auto' : '200px'
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -63,19 +68,19 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  .el-container{
+  .el-container {
     height: 100%;
     .el-main {
       height: 100%;
     }
   }
   .el-aside {
-    background-color: #20222A;
+    background-color: #20222a;
     height: 100vh;
     min-height: 100%;
     .logo {
-      background-color: #20222A;
-      color: rgba(255,255,255,.8);
+      background-color: #20222a;
+      color: rgba(255, 255, 255, 0.8);
       text-align: center;
       height: 130px;
       padding-top: 16px;
