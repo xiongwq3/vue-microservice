@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/views/Index'
 import NotFound from '@/views/NotFound'
+import Monitor from '@/views/Monitor'
 
 Vue.use(Router)
 
@@ -27,7 +28,7 @@ export default new Router({
         {
           path: '/unimplemented2',
           name: 'unimplemented2',
-          component: NotFound,
+          component: Monitor,
         },
         {
           path: '/unimplemented3',
