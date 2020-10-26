@@ -1,19 +1,31 @@
 <template>
   <el-container class="monitor-container">
     <el-row :gutter="20" justify="space-around">
+      <!-- CPU -->
       <el-col :span="12">
-        <panel />
+        <panel
+          src="http://139.9.57.167:3000/d-solo/TSEY6jLmk/istio-galley-dashboard?orgId=1&panelId=38"
+        />
       </el-col>
+      <!-- Memory -->
       <el-col :span="12">
-        <panel />
+        <panel
+          src="http://139.9.57.167:3000/d-solo/TSEY6jLmk/istio-galley-dashboard?orgId=1&panelId=36"
+        />
       </el-col>
     </el-row>
-    <el-row :gutter="20" justify="space-around" class="monitor-row">
+    <el-row :gutter="20" justify="space-around">
+      <!-- Disk -->
       <el-col :span="12">
-        <panel />
+        <panel
+          src="http://139.9.57.167:3000/d-solo/TSEY6jLmk/istio-galley-dashboard?orgId=1&panelId=42"
+        />
       </el-col>
+      <!-- Goroutines -->
       <el-col :span="12">
-        <panel />
+        <panel
+          src="http://139.9.57.167:3000/d-solo/TSEY6jLmk/istio-galley-dashboard?orgId=1&panelId=44"
+        />
       </el-col>
     </el-row>
   </el-container>
@@ -29,10 +41,9 @@ export default {
 
 <style lang="scss">
 .monitor-container {
+  align-items: baseline;
   justify-content: center;
   flex-wrap: wrap;
-}
-.monitor-row {
-  margin-top: 20px;
+  flex-flow: row wrap;
 }
 </style>

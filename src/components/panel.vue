@@ -1,16 +1,25 @@
 <template>
   <el-card>
-    <iframe
-      src="http://139.9.57.167:3000/d-solo/82IXLA5Mk/test-dashboard?orgId=1&panelId=2"
-      width="600"
-      height="400"
-      frameborder="0"
-    />
+    <iframe :src="src" :width="width" :height="height" frameborder="0" />
   </el-card>
 </template>
 
 <script>
 export default {
+  props: {
+    src: {
+      type: String,
+      default: '',
+    },
+    width: {
+      type: Number,
+      default: 600,
+    },
+    height: {
+      type: Number,
+      default: 400,
+    },
+  },
   data() {
     return {}
   },
