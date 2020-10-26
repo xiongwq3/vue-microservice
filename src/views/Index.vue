@@ -69,9 +69,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   .el-container {
-    height: 100%;
+    height: 100vh;
     .el-main {
-      height: 100%;
+      height: 100vh;
     }
   }
   .el-aside {
